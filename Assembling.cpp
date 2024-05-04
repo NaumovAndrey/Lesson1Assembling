@@ -2,8 +2,10 @@
 //
 
 #include "Assembling.h"
+#include "WriteInConsole.cpp"
 #include <clocale>
 #include <iostream>
+
 
 using namespace std;
 
@@ -11,7 +13,26 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 
-	cout << "Игра в спички: определенное количество спичек задается в начале игры. После этого каждый из игроков тянет от 1 до N спичек — проигрывает тот кто вытянул последнюю спичку." << endl;
+	#pragma region variables
+	int maxCountMatchesGame;
+	int maxCountMatchesPlayer;
+	int countPlayer;
+
+	#pragma endregion
+
+
+	WriteInConsole print;
+	print.printConsole("Игра в спички: ");
+	std::cout << std::endl;
+	print.printConsole("Задайте максимальное количество спичек: ");
+	std::cin >> maxCountMatchesGame;
+	print.printConsole("Введите количество игроков: ");
+	std::cin >> countPlayer;
+	print.printConsole("Задайте максимальное число, которое может взять игрок за один ход: ");
+	std::cin >> maxCountMatchesPlayer;
+	
+	
+
 	
 	return 0;
 }

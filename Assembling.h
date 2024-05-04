@@ -3,6 +3,5 @@
 
 #pragma once
 
+#include "WriteInConsole.cpp"
 #include <iostream>
-
-// TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.
